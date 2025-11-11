@@ -9,7 +9,7 @@
 
 ---
 
-## 📋 Descrição do Projeto
+ 📋 Descrição do Projeto
 
 Este projeto foi desenvolvido como parte das atividades do curso de **Análise e Desenvolvimento de Sistemas (ADS)** na **Anhanguera**, com o objetivo de **modelar, criar e consultar um banco de dados relacional completo** que representa uma empresa fictícia.
 
@@ -17,7 +17,7 @@ O sistema foi projetado para demonstrar **relacionamentos entre departamentos, f
 
 ---
 
-## 🧱 Estrutura do Banco de Dados
+ 🧱 Estrutura do Banco de Dados
 
 O banco foi criado em **MySQL**, contendo as seguintes tabelas principais:
 
@@ -30,9 +30,9 @@ O banco foi criado em **MySQL**, contendo as seguintes tabelas principais:
 
 ---
 
-## 💾 Principais comandos SQL utilizados
+ 💾 Principais comandos SQL utilizados
 
-### 🧩 Criação de tabelas
+ 🧩 Criação de tabelas
 ```sql
 CREATE TABLE departamentos (...);
 CREATE TABLE funcionarios (...);
@@ -52,14 +52,14 @@ JOIN departamentos d ON f.departamento_id = d.id
 GROUP BY d.nome;
 
 
-##⚙️ Atualização e exclusão
+⚙️ Atualização e exclusão
 
 UPDATE funcionarios f
 JOIN departamentos d ON f.departamento_id = d.id
 SET f.salario = f.salario * 1.10
 WHERE d.sigla = 'TI';
 
-###📊 Consultas executadas com sucesso
+📊 Consultas executadas com sucesso
 
 ✅ Listagem de projetos e seus departamentos
 ✅ Associação de funcionários aos projetos
