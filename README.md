@@ -42,28 +42,29 @@ Este projeto foi criado para exercitar **conceitos de modelagem de dados, comand
 
    SELECT * FROM funcionarios;
    SELECT * FROM departamentos;
-📊 Exemplo de Consultas
+
+##📊 Exemplo de Consultas
 
 (Adicione aqui prints de tela ou exemplos de resultados de SELECT, se quiser deixar visualmente mais completo.)
 
-👨‍💻 Autor
+##👨‍💻 Autor
 
 Daniel Proton
 Estudante de Análise e Desenvolvimento de Sistemas - Anhanguera Betim (MG)
 💬 LinkedIn
 
-📧 dlpproton@gmail.com
-   
-📚 Licença
+📧 [dlpproton@gmail.com](mailto:dlpproton@gmail.com)  
+🔗 [LinkedIn](https://www.linkedin.com/in/daniellimaproton)
 
+---
+##📚 Licença
 Este projeto é de uso educacional, sem fins comerciais.
 Sinta-se à vontade para estudar, modificar e reutilizar como base de aprendizado.
 
 ---
 
 
-Se quiser, posso **personalizar esse README** com base no conteúdo real do seu `banco.sql` — por exemplo, listar as tabelas, colunas e relacionamentos automaticamente.  
-Quer que eu gere essa versão detalhada com base no seu script SQL? (basta você me enviar o conteúdo do arquivo `banco.sql` aqui).
+
 
 
 
