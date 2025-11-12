@@ -1,148 +1,71 @@
+# 💼 Banco Empresa
 
-# 💼 Banco de Dados - Empresa
+## 📝 Descrição do Projeto
+O **Banco Empresa** é um projeto desenvolvido como parte dos estudos em **Análise e Desenvolvimento de Sistemas (ADS)**.  
+Seu objetivo é simular a estrutura e funcionamento de um banco de dados empresarial, com foco em **armazenamento, consultas e manipulação de dados corporativos**.
 
-Este projeto demonstra a criação e manipulação de um **banco de dados relacional MySQL** para uma empresa fictícia.  
-O objetivo é representar o relacionamento entre **departamentos, funcionários e projetos**.
-
----
-
-## 🧩 Estrutura do Banco
-
-O banco de dados `empresa` contém as seguintes tabelas:
-
-| Tabela | Descrição |
-|--------|------------|
-| `departamentos` | Armazena os departamentos da empresa |
-| `funcionarios` | Registra os funcionários e seus cargos/salários |
-| `projetos` | Contém os projetos em andamento |
-| `funcionarios_projetos` | Relaciona funcionários aos projetos |
+Este projeto foi criado para exercitar **conceitos de modelagem de dados, comandos SQL, criação de tabelas e relacionamento entre entidades**, servindo como base para futuras aplicações que envolvam sistemas de gestão empresarial.
 
 ---
 
-## 🧠 Relacionamentos
-
-- Um **departamento** possui vários **funcionários** e **projetos**.  
-- Um **funcionário** pode participar de **vários projetos**.  
-- Cada **projeto** pertence a um único **departamento**.
-
----
-
-## ⚙️ Exemplos de Consultas
-
-### 🔹 Listar funcionários e seus departamentos
-```sql
-SELECT f.id, f.nome, f.cargo, f.salario, d.nome AS departamento
-FROM funcionarios f
-JOIN departamentos d ON f.departamento_id = d.id
-ORDER BY f.nome;
-=======
-<h1 align="center">🏢 Banco de Dados – Empresa (MySQL)</h1>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Workbench-00758F?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAARVBMVEUAAAD///+AgIAAAACfn5/v7+/o6OjZ2dn8/Pz4+Pjh4eFOTk6jo6Pd3d3BwcHe3t7Dw8PY2NhaWlo/Pz9oaGihoaGlpaX19fX7V8wSAAAAKklEQVQYV2NgQAMYGBhYGBBgYGQAAwwMDGxsQmB8eHgkJCTgAqRoAGpgdD2ZgrE4AAAAASUVORK5CYII=" alt="Workbench"/>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Status-Concluído-success?style=for-the-badge"/>
-</p>
+## 🧠 Objetivos de Aprendizado
+- Praticar a criação e normalização de banco de dados.  
+- Aplicar comandos SQL (DDL e DML).  
+- Entender relacionamentos entre tabelas e integridade referencial.  
+- Simular operações de cadastro e consulta de dados de uma empresa.  
 
 ---
 
- 📋 Descrição do Projeto
-
-Este projeto foi desenvolvido como parte das atividades do curso de **Análise e Desenvolvimento de Sistemas (ADS)** na **Anhanguera**, com o objetivo de **modelar, criar e consultar um banco de dados relacional completo** que representa uma empresa fictícia.
-
-O sistema foi projetado para demonstrar **relacionamentos entre departamentos, funcionários e projetos**, aplicando boas práticas de modelagem e SQL.
-
----
-
- 🧱 Estrutura do Banco de Dados
-
-O banco foi criado em **MySQL**, contendo as seguintes tabelas principais:
-
-| Tabela | Descrição |
-|--------|------------|
-| 🏢 **departamentos** | Armazena os setores da empresa (TI, RH, Financeiro, etc.) |
-| 👩‍💼 **funcionarios** | Contém os dados dos colaboradores, salários e vínculos |
-| 📁 **projetos** | Registra os projetos em andamento |
-| 🔗 **funcionarios_projetos** | Relaciona os funcionários aos projetos com seus respectivos papéis |
+## ⚙️ Tecnologias Utilizadas
+- **MySQL Server**  
+- **Workbench / CLI (linha de comando)**  
+- **SQL**  
+- (adicione outras se aplicável, como PHP, Java, Python etc.)
 
 ---
 
- 💾 Principais comandos SQL utilizados
+## 🗂 Estrutura do Projeto
+- `banco.sql` → Script principal com a criação das tabelas e inserção de dados.  
+- `README.md` → Documentação do projeto.  
+- *(adicione outras pastas/arquivos caso o projeto cresça)*
 
- 🧩 Criação de tabelas
-```sql
-CREATE TABLE departamentos (...);
-CREATE TABLE funcionarios (...);
-CREATE TABLE projetos (...);
-CREATE TABLE funcionarios_projetos (...);
+---
 
+## 🚀 Como Executar
+1. Abra o **MySQL Workbench** ou terminal do MySQL.  
+2. Crie um novo banco de dados (exemplo):
+   ```sql
+3. Copie o conteúdo do arquivo banco.sql e execute.
 
-##🔍 Consultas com JOIN e GROUP BY
+4. Após isso, faça consultas para verificar os resultados, por exemplo:CREATE DATABASE banco_empresa;
+   USE banco_empresa;
 
-SELECT p.id, p.nome, d.nome AS departamento
-FROM projetos p
-JOIN departamentos d ON p.departamento_id = d.id;
+   SELECT * FROM funcionarios;
+   SELECT * FROM departamentos;
+📊 Exemplo de Consultas
 
-SELECT d.nome AS departamento, ROUND(AVG(f.salario), 2) AS salario_medio
-FROM funcionarios f
-JOIN departamentos d ON f.departamento_id = d.id
-GROUP BY d.nome;
+(Adicione aqui prints de tela ou exemplos de resultados de SELECT, se quiser deixar visualmente mais completo.)
 
+👨‍💻 Autor
 
-⚙️ Atualização e exclusão
+Daniel Proton
+Estudante de Análise e Desenvolvimento de Sistemas - Anhanguera Betim (MG)
+💬 LinkedIn
 
-UPDATE funcionarios f
-JOIN departamentos d ON f.departamento_id = d.id
-SET f.salario = f.salario * 1.10
-WHERE d.sigla = 'TI';
+📧 dlpproton@gmail.com
+   
+📚 Licença
 
-📊 Consultas executadas com sucesso
+Este projeto é de uso educacional, sem fins comerciais.
+Sinta-se à vontade para estudar, modificar e reutilizar como base de aprendizado.
 
-✅ Listagem de projetos e seus departamentos
-✅ Associação de funcionários aos projetos
-✅ Cálculo de salário médio por departamento
-✅ Identificação do maior e menor salário
-✅ Atualização de salários da área de TI
-
-⚠️ A tentativa de exclusão de um funcionário foi impedida pelo modo safe update, garantindo a integridade do banco.
+---
 
 
-🧠 Conceitos aplicados
-
-Normalização de dados
-
-Chaves primárias e estrangeiras
-
-Integridade referencial
-
-Relacionamentos 1:N e N:N
-
-Funções agregadas: AVG(), MAX(), MIN(), ROUND()
-
-Consultas com JOIN, GROUP BY, ORDER BY
+Se quiser, posso **personalizar esse README** com base no conteúdo real do seu `banco.sql` — por exemplo, listar as tabelas, colunas e relacionamentos automaticamente.  
+Quer que eu gere essa versão detalhada com base no seu script SQL? (basta você me enviar o conteúdo do arquivo `banco.sql` aqui).
 
 
-🚀 Tecnologias utilizadas
-Ferramenta	Função
-🐬 MySQL	Banco de dados relacional
-🧰 MySQL Workbench	Criação e execução das queries
-🧾 Git + GitHub	Controle de versão e portfólio
-💻 VS Code / Git Bash	Edição e versionamento do projeto
 
 
-🧑‍💻 Autor
-Daniel Lima Proton
-📍 Betim – MG
-🎓 Estudante de Análise e Desenvolvimento de Sistemas – Anhanguera
-💼 Em busca de estágio na área de TI
 
-<p align="center"> <a href="https://github.com/DLP78" target="_blank"> <img src="https://img.shields.io/badge/GitHub-DLP78-181717?style=for-the-badge&logo=github"/> </a> </p>
-
-📁 Arquivos do projeto
-
-banco.sql → Script completo do banco de dados
-
-README.md → Descrição do projeto
-
-<p align="center">🧡 Projeto desenvolvido para fins acadêmicos e de portfólio.</p> ```
